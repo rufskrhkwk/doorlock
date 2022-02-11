@@ -1,0 +1,152 @@
+@font-face{
+    font-family: 'Last N Line';
+    src: url('../Last N Line.ttf');
+}
+html, body{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(87, 87, 87);
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+#container{
+    min-width: 1263px;
+    width: 100%;
+    height: 100%;
+    padding: 5px auto;
+}
+header{
+    width: 100%;
+    max-width: 1537px;
+    min-width: 1263px;
+    margin: 0 auto;
+}
+#logotype{
+    width: 12%;
+    margin: 15px;
+    padding: 15px;
+    border: none;
+}
+header ul{
+    width: 925px;
+    margin: 25px 0px 25px 25px;
+    float: right;
+}
+header ul li{
+    font-family: Last N Line;
+    text-transform: uppercase;
+    margin: 10px 15px;
+    font-size: 18px;
+    float: left;
+}
+header ul li a:hover{
+    color: red;
+}
+section{
+    clear: both;
+    min-width: 1263px;
+    width: 100%;
+    height: 100%;
+    margin-top: 107px;
+    text-align: center;
+}
+#firstarticle{
+    width: 100%;
+}
+#firstarticle h2{
+    min-width: 400px;
+    width: 100%;
+    font-size: 35px;
+    margin: 20px 0px 80px;
+}
+#firstarticle img{
+    margin-bottom: 30px;
+}
+#smalltext{
+    font-family: Last N Line;
+    font-size: 20px;
+}
+#secondarticle{
+    width: 100%;
+}
+#secondarticle table{
+    width: 1000px;
+    margin: 0px auto;
+    border-top: 2px solid #A20611
+}
+#secondarticle table th{
+    font-size: 22px;
+    padding: 10px;
+}
+#secondarticle table td{
+    padding: 15px;
+    border-top: 2px solid #3D3D3D;
+}
+#secondarticle ul li{
+    font-size: 20px;
+    padding: 15px;
+}
+#secondarticle ul li a{
+    padding: 10px;
+}
+.borderright{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#themalist{
+    position: relative;
+}
+#themalist li{
+    margin-left: 226px;
+    width: 180px;
+}
+#imglist{
+    top: 0px;
+    left: 0;
+    display: inline-block;
+    position: absolute;
+}
+#timelist{
+    visibility: visible;
+}
+#timelist li{
+    width: 110px;
+    margin-left: 0px;
+}
+.buttontype{
+    width: 180px;
+    height: 45px;
+    color: #d0cfcf;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #333;
+    background-color: #333;
+}
+.buttontype:hover{
+    border: 2px solid yellowgreen;
+}
+footer{
+    text-transform: none;
+    clear: both;
+    width: 100%;
+    min-width: 1200px;
+    margin-top: 20px;
+}
+footer ul{
+    width: 430px;
+    margin: 10px auto;
+}
+footer ul li{
+    width: 100%;
+    letter-spacing: 0.15em;
+    line-height: 1.5em; 
+}

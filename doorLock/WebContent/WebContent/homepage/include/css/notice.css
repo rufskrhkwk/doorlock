@@ -1,0 +1,134 @@
+@font-face{
+    font-family: 'Last N Line';
+    src: url('../Last N Line.ttf');
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+html, body{
+    width: 100%;
+    background: black;
+    color: white;
+    margin: 0px auto;
+}
+#container{
+    min-width: 1263px;
+    width: 100%;
+    padding: 5px auto;
+}
+header{
+    width: 100%;
+    max-width: 1537px;
+    min-width: 1263px;
+    margin: 0 auto;
+}
+#logotype{
+    width: 12%;
+    margin: 15px;
+    padding: 15px;
+    border: none;
+}
+header ul{
+    width: 925px;
+    margin: 25px 0px 25px 25px;
+    float: right;
+}
+header ul li{
+    font-family: Last N Line;
+    text-transform: uppercase;
+    margin: 10px 15px;
+    font-size: 18px;
+    float: left;
+}
+header ul li a:hover{
+    color: red;
+}
+section{
+    min-width: 1263px;
+    width: 100%;
+    margin-top: 107px;
+    text-align: center;
+}
+section h1{
+    width: 100%;
+    min-width: 370px;
+    padding: 50px 0px;
+    margin: 30px auto;
+    font-family: Last N Line;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.firstarticle{
+    display: inline-block;
+    width: 100%;
+}
+.firstarticle ul{
+    display: block;
+    margin: 0px auto;
+    width: 950px;
+}
+.firstarticle ul li{
+    float: left;
+    padding: 10px;
+    margin: 0px auto;
+    width: 880px;
+    text-align: left;
+}
+.firstarticle ul li img{
+    margin: 0px 20px;
+    float: left;
+}
+.firstarticle ul li h3{
+    color: #c69c6d;
+    width: 735px;
+    float: left;
+    margin: 0px;
+}
+.firstarticle ul li p{
+    font-size: 15px;
+    width: 735px;
+    float: left;
+}
+.secondarticle{
+    clear: both;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+    color: black;
+    background-color: white;
+    margin-top: 150px;
+}
+.secondarticle table{
+    margin: 0px auto 50px;
+    width: 800px;
+}
+.secondarticle table th{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 1px solid white;
+}
+.secondarticle table td{
+    padding: 10px 20px;
+    font-size: 20px;
+    border-bottom: 1px solid darkgray;
+}
+footer{
+    width: 100%;
+    min-width: 1200px;
+    margin-top: 20px;
+}
+footer ul{
+    width: 390px;
+    margin: 10px auto;
+}
+footer ul li{
+    width: 100%;
+    letter-spacing: 0.15em;
+    line-height: 1.5em; 
+}

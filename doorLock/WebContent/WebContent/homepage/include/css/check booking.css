@@ -1,0 +1,137 @@
+@font-face{
+    font-family: 'Last N Line';
+    src: url('../Last N Line.ttf');
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+html, body{
+    width: 100%;
+    background: black;
+    color: white;
+    margin: 0px auto;
+}
+#container{
+    min-width: 1263px;
+    width: 100%;
+    padding: 5px auto;
+}
+header{
+    width: 100%;
+    max-width: 1537px;
+    min-width: 1263px;
+    margin: 0 auto;
+}
+#logotype{
+    width: 12%;
+    margin: 15px;
+    padding: 15px;
+    border: none;
+}
+header ul{
+    width: 950px;
+    margin: 25px 0px 25px 25px;
+    float: right;
+}
+header ul li{
+    font-family: Last N Line;
+    text-transform: uppercase;
+    margin: 10px 15px;
+    font-size: 18px;
+    float: left;
+}
+header ul li a:hover{
+    color: red;
+}
+section{
+    min-width: 1263px;
+    width: 100%;
+    margin-top: 107px;
+    text-align: center;
+}
+#sectionpart{
+    padding-bottom: 100px;
+    background: url('../images/checkbooking_picture.jpg') no-repeat right center;
+    background-size: 50%;
+    background-origin: padding-box; 
+    text-align: center;
+    width: 100%;
+    font-family: Last N Line;
+}
+#sectionpart h2{
+    text-transform: uppercase;
+    color: #d0cfcf;
+    min-width: 400px;
+    font-size: 35px;
+    margin: 20px 0px 80px;
+}
+#sectionpart table{
+    text-align: left;
+    border-top: 2px solid #A20611;
+    width: 50%;
+    min-width: 900px;
+    margin: 10px auto;
+}
+#sectionpart table tbody{
+    width: 100%;
+}
+#sectionpart table tbody th, td{
+    color: #d0cfcf;
+    font-weight: bold;
+    padding: 20px;
+    border-bottom: 1px solid #3D3D3D;
+}
+.tablebottom{
+    border-bottom: none;
+}
+.selecttype1{
+    color: #d0cfcf;
+    border: 1px solid #403F3F;
+    background-color: #403F3F;
+    width: 120px;
+    height: 28px;
+}
+.inputtype{
+    color: #d0cfcf;
+    border: 1px solid #403F3F;
+    background-color: #403F3F;
+    height: 22px;
+    padding: 4px;
+}
+.inputtype:focus{
+    border: 1px solid blue;
+}
+.buttontype{
+    width: 180px;
+    height: 45px;
+    color: #d0cfcf;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #A20611;
+    background-color: #A20611;
+}
+.buttontype:hover{
+    border: 2px solid yellowgreen;
+}
+#smalltext{
+    font-size: 20px;
+}
+footer{
+    width: 100%;
+    min-width: 1263px;
+    margin-top: 20px;
+}
+footer ul{
+    width: 390px;
+    margin: 10px auto;
+    list-style-type: none;
+}
+footer ul li{
+    width: 100%;
+    letter-spacing: 0.15em;
+    line-height: 1.5em; 
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.marineblue.kr/include/iframe/ddnayo_rooms_price.php&booking_id=2161 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Oct 2021 04:43:03 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width, shrink-to-fit=no">
+<link type="text/css" rel="stylesheet" href="../css/builder/awesome.css" />
+<link rel="stylesheet" href="ddnayo_price1.css">
+<script src="../jscript/jquery-2.2.4.min.js"></script>
+
+<script>
+
+var biz_code = "P202011017" ;
+var g_today = "" ;
+
+function priceUpdate() {
+	var date = new Date();
+	var yy = date.getFullYear()+'년';
+	var start_end = $('#tit').text().replace(yy,'') ;
+	start_end = start_end.replace(yy,'') ;
+	
+	var html = '<div class="calendar-controler d-flex justify-content-center mt-4 mb-4">' ;
+	html += '	<div class="form-inline">' ;
+	html += '<div class="year-month">'+start_end+'</div>' ;
+	html += '<div class="btn-group ml-3 mr-2">' ;
+	html += '<div class="btn btn-white border-right-0" id="btn-prev"><i class="fal fa-angle-left fa-lg text-dark"></i></div>' ;
+	html += '<div class="btn btn-white border-left-0" id="btn-next"><i class="fal fa-angle-right fa-lg text-dark"></i></div>' ;
+	html += '</div>' ;
+	html += '<div class="btn btn-white" id="btn-today">오늘</div>' ;
+	html += '</div>' ;
+	html += '	</div>' ;
+
+	html += '<table class="table-mobile-calendar text-center">' ;
+	html += '<thead>' ;
+	
+	
+	var arr_season = [] ;
+	var arr_able = [] ;
+
+	/*
+	<table id="rsv_cal_h" class="rsv_cal_h" border="1">
+		<tr class="ssn">
+			<td class="blank" rowspan="2"><p>객실명</p><p class='su'>(기준~최대)</p></td>
+			<td class="ssn_0001">비수기</td><td class="ssn_0001">비수기</td><td class="ssn_0001">비수기</td><td class="ssn_0001">비수기</td><td class="ssn_0001">비수기</td><td class="ssn_0001">비수기</td><td class="ssn_0001">비수기</td>
+		</tr>
+		
+		<tr class="htr">
+			<td><p>06/19</p><p>(수)</p></td><td><p>06/20</p><p>(목)</p></td><td><p>06/21</p><p>(금)</p></td><td class="satur"><p>06/22</p><p>(토)</p></td><td class="sun"><p>06/23</p><p>(일)</p></td><td><p>06/24</p><p>(월)</p></td><td><p>06/25</p><p>(화)</p></td>
+		</tr>
+	</table>
+	*/
+
+	$('table#rsv_cal_h .ssn td').each(function() {
+		arr_season.push($(this).text()) ;
+	});
+
+
+	//  날짜
+	html += '<tr>' ;
+	html +='<td class="title">' ;
+	html += '객실<div class="small txt-muted">(기준.최대)</div>' ;
+	html += '</td>' ;
+
+
+	var i = 0 ;
+	$('table#rsv_cal_h .htr td').each(function() {
+		var date = $(this).find('p:first-child').text() ;
+		var yoil = $(this).find('p:last-child').text() ;
+		var season = arr_season[i+1] ;
+
+		var color_class = "" ;
+
+		if( $(this).hasClass('sun')) {
+			color_class = " text-red" ;
+		}
+		else if( $(this).hasClass('satur')) {
+			color_class = " text-blue" ;
+		}
+
+		html += '<th>' ;
+		html += '<div class="day'+color_class+'">'+yoil+'</div>' ;
+		html += '<div class="date'+color_class+'">'+date+'</div>' ;
+		html += '<div class="small text-muted">'+season+'</div>' ;
+		html += '</th>' ;
+
+		i++ ;
+	});
+
+	html += '</tr>' ;
+	html += '</thead>' ;
+	html += '<tbody>' ;
+
+	// 가격
+	/*
+	html += '<tr>' ;
+	html += '<td class="title">' ;
+	html += '' ;
+	html += '<div class="small text-muted">(명/명)</div>' ;
+	html += '</td>' ;
+	*/
+
+	/*
+	<table id="rsv_cal_b" class="rsv_cal_b" border="1">
+		<tr class="rate">
+			<td class="nm_room" rowspan="2"><p class='nm' irt='14425'>빈티지꼴뚜기</p><p class='su'>기준2/최대2</p><p class='space'>14평(약46㎡)</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>150,000</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>120,000</p></td>
+		</tr>
+		
+		<tr class="state">
+			<td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate soff'>예약완료</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate soff'>예약완료</p></td>
+		</tr>
+		
+		<tr class="rate">
+			<td class="nm_room" rowspan="2"><p class='nm' irt='14426'>미스칼라</p><p class='su'>기준2/최대2</p><p class='space'>14평(약46㎡)</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>150,000</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>120,000</p></td><td><p class='sale'>120,000</p></td>
+		</tr>
+		
+		<tr class="state">
+			<td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate soff'>예약완료</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate soff'>예약완료</p></td>
+		</tr>
+		
+		<tr class="rate">
+			<td class="nm_room" rowspan="2"><p class='nm' irt='14427'>흑백논리</p><p class='su'>기준2/최대2</p><p class='space'>10평(약33㎡)</p></td><td><p class='sale'>99,000</p></td><td><p class='sale'>99,000</p></td><td><p class='sale'>99,000</p></td><td><p class='sale'>130,000</p></td><td><p class='sale'>99,000</p></td><td><p class='sale'>99,000</p></td><td><p class='sale'>99,000</p></td>
+		</tr>
+		
+		<tr class="state">
+			<td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate soff'>예약완료</p></td><td><p class='rstate soff'>예약완료</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate soff'>예약완료</p></td>
+		</tr>
+
+		<tr class="rate">
+			<td class="nm_room" rowspan="2"><p class='nm' irt='14428'>양박사1977</p><p class='su'>기준2/최대2</p><p class='space'>17평(약56㎡)</p></td><td><p class='sale'>130,000</p></td><td><p class='sale'>130,000</p></td><td><p class='sale'>130,000</p></td><td><p class='sale'>150,000</p></td><td><p class='sale'>130,000</p></td><td><p class='sale'>130,000</p></td><td><p class='sale'>130,000</p></td>
+		</tr>
+
+		<tr class="state">
+			<td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate soff'>예약완료</p></td><td><p class='rstate soff'>예약완료</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate son'>예약가능</p></td><td><p class='rstate soff'>예약완료</p></td>
+		</tr>
+	</table>
+	*/
+
+	
+		
+	
+
+
+	$('table#rsv_cal_b tr.state').each(function() {
+		$(this).find('td').each(function() {
+			var obj = {} ;
+			
+			if( $(this).find('p').hasClass('son')) {
+				obj['state'] = 'on' ;
+				//obj['text'] = "예약가능";
+			}
+			else if( $(this).find('p').hasClass('soff')) {
+				obj['state'] = 'off' ;
+				//obj['text'] = "예약완료";
+			}
+			obj['text'] = $(this).text() ;
+
+			arr_able.push(obj) ;
+		});
+	});
+
+
+
+
+	var k = 0 ;
+	$('table#rsv_cal_b tr.rate').each(function() {
+
+		html += '<tr>' ;
+		
+		var j = 0 ;
+		
+		$(this).find('td').each(function() {
+			var title = $(this).text()+'원' ;
+			var nm = "" ;
+			var man = "" ;
+
+			if( j == 0) {
+				nm = $(this).find('p.nm').text() ;
+				man = $(this).find('p.su').text() ;
+				title = nm + '<br />' + man ;
+			}
+			else {
+
+				if( $(this).find('p').hasClass('dc')) {
+					var dc = $(this).find('p:first-child').text() ;
+					var price = $(this).find('p:nth-child(2)').text() ;
+					//var price = $(this).find('p.sale').text();
+					var sale = $(this).find('p:last-child').text() ;
+					title = '<div style="line-height:normal">'+dc + '<br /><strike>'+ price+'원</strike><br />' + sale + '원 </div>' ;
+				}
+				else {
+					title = $(this).text()+'원' ;
+				}
+
+				
+			}
+
+			if( j == 0) {
+				html += '<td class="title">' ;
+				html += nm ;
+				html += '<div class="small text-muted">('+man+')</div>' ;
+				html += '</div>' ;
+				html += '</td>' ;
+			}
+			else {
+				if( arr_able[k]['state'] == 'on') {
+					html += '<td class="selectable">' ;
+					html += '<div>' ;
+					html += '<div class="price">'+title+'</div>' ;
+					html += '<div class="status small">'+arr_able[k]['text']+'</div>' ;
+					html += '</div>' ;
+					html += '</td>' ;
+				}
+				else if( arr_able[k]['state'] == 'off') {
+					html += '<td class="dimed">' ;
+					html += '<div>' ;
+					html += '<div class="status small">'+arr_able[k]['text']+'</div>' ;
+					html += '</div>' ;
+					html += '</td>' ;
+				}
+			}
+
+			if( j > 0) k++ ;
+
+			j++ ;
+		});
+	
+		html += '</tr>' ;
+	});
+
+	html += '</tr>' ;
+	html += '</tbody>' ;
+	html += '	</table>' ;
+
+	//console.log( 'arr_able->' + arr_able) ;
+
+	$('#result').html(html) ;
+}
+
+function get_today() {
+	var date = new Date();
+	var year = date.getFullYear();
+	var month = date.getMonth()+1
+	var day = date.getDate();
+
+	if(month < 10) {
+		month = "0"+month;
+	}
+	if(day < 10) {
+		day = "0"+day;
+	}
+
+	var today = year+"-"+month+"-"+day;
+	return today ;
+}
+
+function get_data(today) {
+	var s_day = today ;
+	var su_day = '7' ;
+	var deviceType = 'computer' ;
+	if(deviceType == 'mobile') su_day = '3' ;
+
+	$.ajax({
+		type: 'POST',
+		url: 'ddnayo_rooms_api.php',
+		data:{
+			'biz_code':'P202011017',
+			'booking_id':'2161',
+			'room_no':'',
+			's_day':s_day,
+			'su_day':su_day,
+			'deviceType':deviceType
+		},
+		error:function(xhr, ajaxOptions, thrownError) {
+		  alert(ajaxOptions+","+thrownError) ;
+		},
+		success:function(data, textStatus) {
+			$('#old').html(data) ;
+			priceUpdate() ;
+
+			// 예약상태 제거
+			var del_status = ['P201907873', 'P201909006', 'P201909004', 'P201911008', 'P201911010', 'P202006004'];
+			//console.log("::");
+			if(del_status.indexOf(biz_code) > -1) {
+				$('.selectable .status').remove() ;
+				$('.selectable .price').css({'height':'auto','padding-top':'0px'});
+			}
+		}
+	});
+}
+
+$(document).ready(function() {
+	g_today = get_today() ;
+
+	get_data(g_today) ;
+
+	$(document).on('click','#btn-prev',function(e) {
+		var today = $('#prev-date').val() ;
+		get_data(today) ;
+	});
+
+	$(document).on('click','#btn-next',function(e) {
+		var today = $('#next-date').val() ;
+		get_data(today) ;
+	});
+
+	$(document).on('click','#btn-today',function(e) {
+		get_data(g_today) ;
+	});
+});
+</script>
+
+</head>
+<body>
+<div id="old" style="display:none">
+	<input type='hidden' id='prev-date' value='' />
+	<input type='hidden' id='next-date' value='' />
+</div>
+
+<div class="ddnayo_price_wrap" id="result">
+	
+</div>
+</body>

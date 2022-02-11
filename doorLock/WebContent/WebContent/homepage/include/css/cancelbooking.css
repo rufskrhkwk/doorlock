@@ -1,0 +1,108 @@
+@font-face{
+    font-family: Last N Line;
+    src: url('../Last N Line.ttf');
+}
+html, body{
+    width: 100%;
+    background: black;
+    color: white;
+    margin: 0px auto;
+    text-transform: uppercase;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#container{
+    width: 100%;
+    padding: 5px auto;
+}
+header{
+    width: 100%;
+    max-width: 1537px;
+    min-width: 1263px;
+    margin: 0 auto;
+}
+#logotype{
+    width: 12%;
+    margin: 15px;
+    padding: 15px;
+    border: none;
+}
+header ul{
+    width: 950px;
+    margin: 25px 0px 25px 25px;
+    float: right;
+}
+header ul li{
+    font-family: Last N Line;
+    margin: 10px 15px;
+    font-size: 18px;
+    float: left;
+}
+header ul li a:hover{
+    color: red;
+}
+section{
+    min-width: 1263px;
+    width: 100%;
+    margin-top: 107px;
+}
+#firstarticle{
+    text-align: center;
+    width: 100%;
+}
+#firstarticle h2{
+    min-width: 400px;
+    font-size: 35px;
+    margin: 20px 0px 80px;
+}
+#secondarticle{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 70px;
+}
+#secondarticle table{
+    border-top: 2px solid #A20611;
+    width: 1000px;
+    margin: 0px auto;
+}
+#secondarticle table td{
+    color: #d0cfcf;
+    padding: 80px;
+    border-top: 1px solid #3D3D3D;
+}
+#smalltext{
+    font-family: Last N Line;
+    font-size: 20px;
+}
+.buttontype{
+    width: 180px;
+    height: 45px;
+    color: #d0cfcf;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #A20611;
+    background-color: #A20611;
+}
+.buttontype:hover{
+    border: 2px solid yellowgreen;
+}
+footer{
+    text-transform: none;
+    width: 100%;
+    min-width: 1263px;
+    margin-top: 20px;
+}
+footer ul{
+    width: 430px;
+    margin: 10px auto;
+}
+footer ul li{
+    width: 100%;
+    letter-spacing: 0.15em;
+    line-height: 1.5em; 
+}

@@ -1,0 +1,121 @@
+@font-face{
+    font-family: 'Last N Line';
+    src: url('../Last N Line.ttf');
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+html, body{
+    width: 100%;
+    background: black;
+    color: white;
+    margin: 0px auto;
+}
+#container{
+    min-width: 1263px;
+    width: 100%;
+    padding: 5px auto;
+}
+header{
+    width: 100%;
+    max-width: 1537px;
+    min-width: 1263px;
+    margin: 0 auto;
+}
+#logotype{
+    width: 12%;
+    margin: 15px;
+    padding: 15px;
+    border: none;
+}
+header ul{
+    width: 925px;
+    margin: 25px 0px 25px 25px;
+    float: right;
+}
+header ul li{
+    font-family: Last N Line;
+    text-transform: uppercase;
+    margin: 10px 15px;
+    font-size: 18px;
+    float: left;
+}
+header ul li a:hover{
+    color: red;
+}
+section{
+    min-width: 1263px;
+    width: 100%;
+    margin-top: 107px;
+    text-align: center;
+}
+.firstarticle{
+    width: 100%;
+    min-width: 1263px;
+    clear: both;
+    text-align: center;
+}
+.firstarticle h1{
+    margin: 0px auto 10px auto;
+    padding-top: 50px;
+    font-size: 40px;
+    width: 100%;
+    min-width: 670px;
+}
+.firstarticle p{
+    margin: 0px auto 70px;
+    width: 100%;
+    min-width: 850px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.7em;
+    font-size: 14px;
+}
+.secondarticle{
+    display: inline-block;
+    width: 100%;
+    min-width: 1030px;
+    max-width: 1510px;
+}
+.secondarticle ul{
+    float: left;
+    width: 26%;
+    min-width: 330px;
+    margin: 20px;
+    text-align: center;
+}
+.secondarticle ul li{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    letter-spacing: 0.3em;
+    font-size: 20px;
+}
+.secondarticle ul li img{
+    width: 100%;
+}
+.secondarticle ul li a{
+    padding: 10px;
+    font-weight: bold;
+}
+.secondarticle ul li a:hover{
+    background-color: gray;
+}
+footer{
+    width: 100%;
+    min-width: 1200px;
+    margin-top: 20px;
+}
+footer ul{
+    width: 390px;
+    margin: 10px auto;
+}
+footer ul li{
+    width: 100%;
+    letter-spacing: 0.15em;
+    line-height: 1.5em; 
+}

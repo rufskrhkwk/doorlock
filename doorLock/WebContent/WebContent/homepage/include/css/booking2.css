@@ -1,0 +1,140 @@
+@font-face{
+    font-family: Last N Line;
+    src: url('../Last N Line.ttf');
+}
+html, body{
+    text-align: center;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 0px auto;
+    text-transform: uppercase;
+}
+#container{
+    width: 100%;
+    padding: 5px auto;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+header{
+    width: 100%;
+    max-width: 1537px;
+    min-width: 1280px;
+    margin: 0 auto;
+}
+#logotype{
+    width: 12%;
+    margin: 15px;
+    padding: 15px;
+    border: none;
+}
+header ul{
+    width: 950px;
+    margin: 25px 0px 25px 25px;
+    float: right;
+}
+header ul li{
+    font-family: Last N Line;
+    margin: 10px 15px;
+    font-size: 18px;
+    float: left;
+}
+header ul li a:hover{
+    color: red;
+}
+section{
+    min-width: 1263px;
+    width: 100%;
+    margin-top: 107px;
+}
+#firstarticle h2{
+    min-width: 400px;
+    font-size: 35px;
+    margin: 20px 0px 80px;
+}
+#secondarticle{
+    text-align: left;
+    width: 100%;
+    margin-bottom: 70px;
+}
+#secondarticle table{
+    border-top: 2px solid #A20611;
+    width: 1000px;
+    margin: 0px auto;
+}
+#secondarticle table th,td{
+    color: #000000;
+    padding: 15px;
+    border-top: 1px solid #3D3D3D;
+}
+#smalltext{
+    font-family: Last N Line;
+    font-size: 20px;
+}
+#warningtype{
+    padding-left: 15px;
+    list-style-type: circle;
+    color: red;
+    line-height: 1.5em;
+}
+#d1:focus, #user_prevemail:focus, #user_nextemail:focus, #user_p1:focus, #user_p2:focus, #user_name:focus, #price:focus, #agreeing:focus{
+    border: 1px solid blue;
+}
+.selecttype, .inputtype{
+    color: #d0cfcf;
+    border: 1px solid #180f0f;
+    background-color: #403F3F;
+}
+.selecttype{
+    height: 28px;
+    width: 160px;
+}
+.inputtype{
+    height: 22px;
+    padding: 4px;
+}
+/* 개인정보처리방침 배경 */
+.areatype{
+    width: 100%;
+    color: #000000;
+    border: 1px solid #3D3D3D;
+    background-color: rgb(255, 255, 255);
+}
+.finaletype{
+    border: none;
+    text-align: center;
+}
+/*처음으로 이전으로 다음으로 배경*/
+.buttontype{
+    width: 180px;
+    height: 45px;
+    color: #d0cfcf;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid yellow;
+    background-color:yellow;
+}
+.buttontype:hover{
+    border: 2px solid yellowgreen;
+}
+footer{
+    text-transform: none;
+    text-align: left;
+    width: 100%;
+    min-width: 1280px;
+    margin-top: 20px;
+}
+footer ul{
+    width: 430px;
+    margin: 10px auto;
+}
+footer ul li{
+    width: 100%;
+    letter-spacing: 0.15em;
+    line-height: 1.5em; 
+}

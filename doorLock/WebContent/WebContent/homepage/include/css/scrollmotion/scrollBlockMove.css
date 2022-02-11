@@ -1,0 +1,304 @@
+/* made by KimEunJi in INET*/
+/* 페이드 */
+.scrollRemoveFade{
+	transform-origin: 50% 50%;
+	animation: scrollRemoveFade 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemoveFade{
+	0%	{z-index:1;opacity:1;}
+	100%{z-index:1;opacity:1;}
+}
+.scrollMoveFade{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollMoveFade 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMoveFade{
+	0%	{z-index:2;opacity:0;}
+	100%{z-index:2;opacity:1;}
+}
+
+/* Pop */
+.scrollRemovePop{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollRemovePop 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemovePop{
+	0%	{z-index:2;transform:translateX(0%) scale(1);opacity:1;}
+	100%{z-index:2;transform:translateX(0%) scale(1.1);opacity:0;}
+}
+.scrollMovePop{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollMovePop 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMovePop{
+	0%	{z-index:1;}
+	100%{z-index:1;}
+}
+
+/* 3d */
+.scrollRemove3Ddown{
+	position:absolute;z-index:3;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 0%;
+	animation: scrollRemove3Ddown 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemove3Ddown{
+	0%	{opacity:1.00;transform:perspective(1000px) rotateX(0deg)	;z-index:1;}                    
+	15%	{opacity:0.80;transform:perspective(1000px) rotateX(-10deg)	;}                              
+	80% {opacity:0.15;transform:perspective(1000px) rotateX(0deg) translateZ(-300px);}               
+	100%{opacity:0.00;transform:perspective(1000px) translateZ(-300px) translatey(-10%);z-index:1;}  
+}
+.scrollMove3Ddown{
+	position:absolute;z-index:2;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 50%;
+	animation: scrollMove3Ddown 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMove3Ddown{
+	0%	{opacity:0.00;top:100%}                    
+	100%{opacity:1.00;top:0%}                              
+}
+.scrollRemove3DUp{
+	position:absolute;z-index:3;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 100%;
+	animation: scrollRemove3DUp 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemove3DUp{
+	0%	{opacity:1.00;transform:perspective(1000px) rotateX(0deg)	;z-index:1;}                          
+	15%	{opacity:0.80;transform:perspective(1000px) rotateX(10deg)	;}                                    
+	80%	{opacity:0.15;transform:perspective(1000px) rotateX(0deg) translateZ(-300px);}                     
+	100%{opacity:0.00;transform:perspective(1000px) translateZ(-300px) translatey(10%);z-index:1;}         
+}
+.scrollMove3DUp{
+	position:absolute;z-index:2;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 50%;
+	animation: scrollMove3DUp 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMove3DUp{
+	0%	{opacity:0.00;top:-100%}                    
+	100%{opacity:1.00;top:0%}                              
+}
+/* Pop2 */
+.scrollRemovePdown{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollRemovePdown 0.7s ease-in 0s 1 alternate forwards;
+}
+@keyframes scrollRemovePdown{
+	0%	{z-index:2;}
+	100%{z-index:2;}
+}
+.scrollMovePdown{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollMovePdown 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMovePdown{
+	0%	{z-index:3;transform:scale(0.8);opacity:0;}
+	100%{z-index:3;transform:scale(1);opacity:1;}
+}
+.scrollRemovePup{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollRemovePup 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemovePup{
+	0%	{z-index:3;transform:scale(1);opacity:1;}
+	100%{z-index:3;transform:scale(0.8);opacity:0;}
+}
+.scrollMovePup{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollMovePup 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMovePup{
+	0%	{z-index:1;}
+	100%{z-index:1;}
+}
+
+/* 정직한 좌우 */
+.scrollRemoveRight{
+	position:absolute;z-index:3;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 0%;
+	animation: scrollRemoveRight 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemoveRight{
+	0%	{transform:translateX(0%);}
+	100%{transform:translateX(-100%)}
+}
+.scrollMoveRight{
+	position:absolute;z-index:2;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 50%;
+	animation: scrollMoveRight 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMoveRight{
+	0%	{transform:translateX(100%);}
+	100%{transform:translateX(0%)}
+}
+.scrollRemoveLeft{
+	position:absolute;z-index:3;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 100%;
+	animation: scrollRemoveLeft 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemoveLeft{
+	0%	{transform:translateX(0%);}
+	100%{transform:translateX(100%)}
+}
+.scrollMoveLeft{
+	position:absolute;z-index:2;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 50%;
+	animation: scrollMoveLeft 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMoveLeft{
+	0%	{transform:translateX(-100%);}
+	100%{transform:translateX(0%)}
+}
+
+
+/* 좌우페이드 */
+.scrollRemoveFleft{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollRemoveFleft 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemoveFleft{
+	0%	{z-index:2;transform:translateX(0%) scale(1);opacity:1;}
+	100%{z-index:2;transform:translateX(-30%) scale(1.1);opacity:0;}
+}
+.scrollMoveFleft{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollMoveFleft 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMoveFleft{
+	0%	{z-index:1;}
+	100%{z-index:1;}
+}
+.scrollRemoveFright{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollRemoveFright 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemoveFright{
+	0%	{z-index:2;transform:translateX(0%) scale(1);opacity:1;}
+	100%{z-index:2;transform:translateX(30%) scale(1.1);opacity:0;}
+}
+.scrollMoveFright{
+	position:absolute;
+	width:100%;top:0;height:100%;
+	transform-origin: 50% 50%;
+	animation: scrollMoveFright 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMoveFright{
+	0%	{z-index:1;}
+	100%{z-index:1;}
+}
+
+/* 상하 */
+.scrollRemoveDown{
+	position:absolute;z-index:3;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 0%;
+	animation: scrollRemoveDown 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemoveDown{
+	0%	{transform:translateY(0%);}
+	100%{transform:translateY(-100%)}
+}
+
+.scrollMoveDown{
+	position:absolute;z-index:2;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 50%;
+	animation: scrollMoveDown 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMoveDown{
+	0%	{transform:translateY(100%);}
+	100%{transform:translateY(0%)}
+}
+.scrollRemoveUp{
+	position:absolute;z-index:3;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 100%;
+	animation: scrollRemoveUp 0.7s linear 0s 1 alternate forwards;
+}
+@keyframes scrollRemoveUp{
+	0%	{transform:translateY(0%);}
+	100%{transform:translateY(100%)}
+}
+.scrollMoveUp{
+	position:absolute;z-index:2;
+	width:100%;top:0;height:100%;
+	transform-stylepreserve-3d;
+	transform-origin: 50% 50%;
+	animation: scrollMoveUp 0.7s linear 0s 1 alternate both;
+}
+@keyframes scrollMoveUp{
+	0%	{transform:translateY(-100%);}
+	100%{transform:translateY(0%)}
+}
+/* photoMotion 관련 */
+.scrollRemoveNo{
+	position:absolute;z-index:2;
+	width:100%;top:0;height:100%;
+}
+.scrollMoveNo{
+	position:absolute;z-index:3;
+	width:100%;top:0;height:100%;
+}
+.photoMC{
+	position:relative;overflow:hidden;
+	height:100%;
+	background-repeat:no-repeat;
+	background-size:0px;
+	background-position:center;
+}
+.photoMC li{
+	position:relative;display:inline-block;float:left;overflow:hidden;
+	background-image:inherit;
+	background-position:inherit;
+	background-size:cover;
+	transition:all 0.7s;
+	transition-property:transform, opacity;
+}
+.photoMC .MOVE{
+	transform:translateX(0px) translateY(0px) scale(1) rotate(0) !important;
+	opacity: 1.0 !important;
+}
+.photoMC li p{
+	display:inline-block;
+	position:absolute;left:0;top:0;
+	background-image:inherit;
+	background-position:inherit;
+	background-size:inherit;
+}

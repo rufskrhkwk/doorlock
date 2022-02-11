@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from www.marineblue.kr/include/iframe/ddnayo_room_price.php&booking_id=2161&room_no=17016&room_name=102%eb%82%98%eb%9e%98&limit_man=2&max_man=2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Oct 2021 04:13:44 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width, shrink-to-fit=no">
+<link type="text/css" rel="stylesheet" href="../css/builder/awesome.css" />
+<link rel="stylesheet" href="ddnayo_price1.css">
+<script src="../jscript/jquery-2.2.4.min.js"></script>
+
+<script>
+
+var g_today = "" ;
+var biz_code = "P202011017" ;
+
+function priceUpdate() {
+	var date = new Date();
+	var yy = date.getFullYear()+'년';
+	var start_end = $('#tit').text().replace(yy,'') ;
+	start_end = start_end.replace(yy,'') ;
+	
+	var html = '<div class="calendar-controler d-flex justify-content-center mt-4 mb-4">' ;
+	html += '	<div class="form-inline">' ;
+	html += '<div class="year-month">'+start_end+'</div>' ;
+	html += '<div class="btn-group ml-3 mr-2">' ;
+	html += '<div class="btn btn-white border-right-0" id="btn-prev"><i class="fal fa-angle-left fa-lg text-dark"></i></div>' ;
+	html += '<div class="btn btn-white border-left-0" id="btn-next"><i class="fal fa-angle-right fa-lg text-dark"></i></div>' ;
+	html += '</div>' ;
+	html += '<div class="btn btn-white" id="btn-today">오늘</div>' ;
+	html += '</div>' ;
+	html += '	</div>' ;
+
+	html += '<table class="table-mobile-calendar text-center">' ;
+	html += '<thead>' ;
+	
+	
+	var arr_season = [] ;
+	var arr_able = [] ;
+
+	$('table#tblRate .ss td').each(function() {
+		arr_season.push($(this).text()) ;
+	});
+
+		
+	// 예약가능
+	$('table#tblRate .state td').each(function() {
+		//arr_able.push($(this).html()) ;
+		console.log($(this).text());
+		arr_able.push($(this).text()) ;
+	});
+	
+
+	//  날짜
+	html += '<tr>' ;
+	html +='<td class="title">' ;
+	html += '객실<div class="small txt-muted">(기준.최대)</div>' ;
+	html += '</td>' ;
+
+
+	var i = 0 ;
+	$('table#tblRate .head td').each(function() {
+		var tmp = $(this).text().split('(') ;
+		var date = tmp[0] ;
+		var yoil = tmp[1].replace(')','') ;
+		var season = arr_season[i] ;
+
+		var color_class = "" ;
+
+		if( $(this).hasClass('sun')) {
+			color_class = " text-red" ;
+		}
+		else if( $(this).hasClass('satur')) {
+			color_class = " text-blue" ;
+		}
+
+		html += '<th>' ;
+		html += '<div class="day'+color_class+'">'+yoil+'</div>' ;
+		html += '<div class="date'+color_class+'">'+date+'</div>' ;
+		html += '<div class="small text-muted">'+season+'</div>' ;
+		html += '</th>' ;
+
+		i++ ;
+
+	});
+
+	html += '</tr>' ;
+	html += '</thead>' ;
+	html += '<tbody>' ;
+
+	// 가격
+	html += '<tr>' ;
+
+	html += '<td class="title">' ;
+	html += '102꿀단지' ;
+	html += '<div class="small text-muted">(2명/2명)</div>' ;
+	html += '</td>' ;
+
+	i = 0 ;
+	$('table#tblRate .rprice td').each(function() {
+		// html += "<td class='price'>"+$(this).html()+"<br />"+arr_able[i]+"</td>" ;
+		if( arr_able[i].trim() == "예약가능") {
+			var title = "" ;
+			if( $(this).find('p').hasClass('dc')) {
+				var dc = $(this).find('p:first-child').text() ;
+				var price = $(this).find('p:nth-child(2)').text() ;
+				var sale = $(this).find('p:last-child').text() ;
+				title = '<div style="line-height:normal">'+dc + '<br /><strike>'+ price+'원</strike><br />' + sale + '원 </div>' ;
+			}
+			else {
+				title = $(this).text()+'원' ;
+			}
+
+
+			html += '<td class="selectable">' ;
+			html += '<div>' ;
+			if(biz_code == 'P202007003'){
+                html += '<div class="price" style="height: 0; padding-top: 18px">'+title+'</div>' ;
+            }else{
+                html += '<div class="price">'+title+'</div>' ;
+            }
+			if(biz_code!='P202005914' && biz_code!='P202007003' && biz_code!='P202012006'){
+				html += '<div class="status small">'+arr_able[i]+'</div>' ;
+			}
+
+			html += '</div>' ;
+			html += '</td>' ;
+		}
+		else if( arr_able[i].trim() == "예약완료") {
+            var title = "" ;
+            if( $(this).find('p').hasClass('dc')) {
+                var dc = $(this).find('p:first-child').text() ;
+                var price = $(this).find('p:nth-child(2)').text() ;
+                var sale = $(this).find('p:last-child').text() ;
+                title = '<div style="line-height:normal">'+dc + '<br /><strike>'+ price+'원</strike><br />' + sale + '원 </div>' ;
+            }
+            else {
+                title = $(this).text()+'원' ;
+            }
+
+			if(biz_code=='P202006004') {
+                html += '<td class="selectable">' ;
+                html += '<div>' ;
+                html += '<div class="price">'+title+'</div>' ;
+                html += '</div>' ;
+                html += '</td>' ;
+			}
+			else {
+			html += '<td class="dimed">' ;
+			html += '<div>' ;
+			if(biz_code=='P202005007'){
+			html += '<div class="price">'+title+'</div>' ;
+			}
+
+            if(biz_code!='P202005914' && biz_code!='P202005007' && biz_code!='P202012006'){
+                html += '<div class="small">'+arr_able[i]+'</div>' ;
+            }
+			html += '</div>' ;
+			html += '</td>' ;
+			}
+		}
+		else {
+                html += '<td class="dimed">' ;
+                html += '<div>' ;
+				if(biz_code!='P202012006'){
+                html += '<div class="small">'+arr_able[i]+'</div>' ;
+				}
+                html += '</div>' ;
+                html += '</td>' ;
+
+		}
+
+		i++ ;
+	});
+
+	html += '</tr>' ;
+	html += '</tbody>' ;
+	html += '	</table>' ;
+
+
+	$('#result').html(html) ;
+}
+
+function get_today() {
+	var date = new Date();
+	var year = date.getFullYear();
+	var month = date.getMonth()+1
+	var day = date.getDate();
+	if(month < 10){
+			month = "0"+month;
+	}
+	if(day < 10){
+			day = "0"+day;
+	}
+
+	var today = year+"-"+month+"-"+day;
+	return today ;
+}
+
+function get_data(today) {
+	var s_day = today ;
+	var su_day = '7' ;
+	var deviceType = 'computer' ;
+	if(deviceType == 'mobile') su_day = '3' ;
+    
+    
+	$.ajax({
+		type: 'POST',
+		url: 'ddnayo_room_api.php',
+		data:{
+			'biz_code':'P202011017',
+			'booking_id':'2161',
+			'room_no':'17016',
+			's_day':s_day,
+			'su_day':su_day,
+			'deviceType':deviceType
+		},
+		error:function(xhr, ajaxOptions, thrownError) {
+		  alert(ajaxOptions+","+thrownError) ;
+		},
+		success:function(data, textStatus) {
+			$('#old').html(data) ;
+			priceUpdate() ;
+
+			// 예약상태 제거
+            var del_status = ['P201907873', 'P201909006', 'P201909004', 'P201911008', 'P201911010', 'P201912009', 'P202006004'];
+
+			if(del_status.indexOf(biz_code) > -1) {
+				$('.selectable .status').remove() ;
+				$('.selectable .price').css({'height':'auto','padding-top':'0px'});
+			}
+
+		}
+	});
+}
+
+$(document).ready(function() {
+	g_today = get_today() ;
+
+	get_data(g_today) ;
+
+	$(document).on('click','#btn-prev',function(e) {
+		var today = $('#prev-date').val() ;
+		get_data(today) ;
+	});
+
+	$(document).on('click','#btn-next',function(e) {
+		var today = $('#next-date').val() ;
+		get_data(today) ;
+	});
+
+	$(document).on('click','#btn-today',function(e) {
+		get_data(g_today) ;
+	});
+});
+</script>
+
+</head>
+<body>
+<div id="old" style="display:none">
+	<input type='hidden' id='prev-date' value='' />
+	<input type='hidden' id='next-date' value='' />
+</div>
+
+<div class="ddnayo_price_wrap" id="result">
+	
+</div>
+</body>

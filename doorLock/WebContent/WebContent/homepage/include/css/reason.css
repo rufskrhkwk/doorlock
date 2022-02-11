@@ -1,0 +1,109 @@
+@font-face{
+    font-family: 'Last N Line';
+    src: url('../Last N Line.ttf');
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+html, body{
+    width: 100%;
+    background: black;
+    color: white;
+    margin: 0px auto;
+}
+#container{
+    width: 100%;
+    padding: 5px auto;
+}
+header{
+    width: 100%;
+    max-width: 1537px;
+    min-width: 1280px;
+    margin: 0 auto;
+}
+#logotype{
+    width: 12%;
+    margin: 15px;
+    padding: 15px;
+    border: none;
+}
+header ul{
+    width: 950px;
+    margin: 25px 0px 25px 25px;
+    float: right;
+}
+header ul li{
+    font-family: Last N Line;
+    text-transform: uppercase;
+    margin: 10px 15px;
+    font-size: 18px;
+    float: left;
+}
+header ul li a:hover{
+    color: red;
+}
+section{
+    width: 100%;
+    min-width: 1280px;
+    background-color: white;
+    clear: both;
+    text-align: center;
+    color: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.sectiontitle{
+    width: 25%;
+    min-width: 1280px;
+    padding: 15px 0px;
+    margin: 10px auto;
+    color: orange;
+}
+section ul{
+    margin: 15px auto;
+    width: 30%;
+    min-width: 1280px;
+    padding: 10px 0px;
+}
+section ul li{
+    width: 20%;
+    min-width: 293px;
+    vertical-align: top;
+    display: inline-block;
+}
+section ul li img{
+    width: 64%;
+}
+section ul li h2{
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+    border-bottom: 1px solid black;
+}
+section ul li p{
+    text-align: justify;
+    font-size: 14px;
+    width: 250px;
+    padding: 10px;
+    margin: 0px auto;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+}
+footer{
+    width: 100%;
+    min-width: 1280px;
+    margin-top: 20px;
+}
+footer ul{
+    width: 390px;
+    margin: 10px auto;
+}
+footer ul li{
+    width: 100%;
+    letter-spacing: 0.15em;
+    line-height: 1.5em; 
+}

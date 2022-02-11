@@ -1,0 +1,146 @@
+@font-face{
+    font-family: 'Last N Line';
+    src: url('../Last N Line.ttf');
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+html, body{
+    width: 100%;
+    background: black;
+    color: white;
+    margin: 0px auto;
+}
+#container{
+    min-width: 1263px;
+    width: 100%;
+    padding: 5px auto;
+}
+header{
+    width: 100%;
+    max-width: 1537px;
+    min-width: 1263px;
+    margin: 0 auto;
+}
+#logotype{
+    width: 12%;
+    margin: 15px;
+    padding: 15px;
+    border: none;
+}
+header ul{
+    width: 925px;
+    margin: 25px 0px 25px 25px;
+    float: right;
+}
+header ul li{
+    font-family: Last N Line;
+    text-transform: uppercase;
+    margin: 10px 15px;
+    font-size: 18px;
+    float: left;
+}
+header ul li a:hover{
+    color: red;
+}
+section{
+    min-width: 1263px;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+#article{
+    display: inline-block;
+    margin: 30px;
+    width: 1100px;
+}
+#article h2{
+    text-align: center;
+    width: 200px;
+    text-transform: uppercase;
+    font-family: Last N Line;
+}
+#article img{
+    margin-left: 15px;
+    float: left;
+    width: 500px;
+    height: 742px;
+}
+#article ul{
+    width: 500px;
+    display: inline-block;
+    text-align: left;
+}
+#article ul li{
+    line-height: 1.5em;
+}
+#liststyle1{
+    font-size: 30px;
+    font-weight: bold;
+    width: 500px;
+    float: left;
+}
+#liststyle2{
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: bold;
+    width: 500px;
+    float: left;
+    border-bottom: 1px solid lightgray;
+}
+#liststyle3{
+    color: red;
+    padding-top: 10px;
+    width: 500px;
+    float: left;
+}
+#liststyle4{
+    color: red;
+    padding-top: 10px;
+    width: 500px;
+    float: left;
+}
+#describetitle{
+    font-size: 25px;
+    line-height: 1.5em;
+    color: dodgerblue;
+}
+#liststyle5{
+    text-align: justify;
+    letter-spacing: 0.2em;
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+    width: 500px;
+    float: left;
+}
+#liststyle6{
+    float: right;
+}
+#liststyle6 a{
+    border: 1px solid white;
+    border-bottom: 3px solid white;
+    background-color: lightslategray;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+}
+footer{
+    width: 100%;
+    min-width: 1200px;
+    margin-top: 20px;
+}
+footer ul{
+    width: 390px;
+    margin: 10px auto;
+}
+footer ul li{
+    width: 100%;
+    letter-spacing: 0.15em;
+    line-height: 1.5em; 
+}
